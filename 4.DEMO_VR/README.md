@@ -3,6 +3,6 @@
 
 - Demo Escenario Realidad Virtual (VR):
 
-https://jaimeguti.github.io/TFG_DEMOS/4.DEMO_VR/Index.html
+https://jaimeguti.github.io/TFG_DEMOS/4.DEMO_VR/Index_VR.html
 
 

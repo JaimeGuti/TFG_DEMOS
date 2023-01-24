@@ -10,17 +10,17 @@ https://jaimeguti.github.io/TFG_DEMOS/1.DEMOS_Individuales
 
 - Demo Horizontal:
 
-https://jaimeguti.github.io/TFG_DEMOS/2.DEMO_Horizontal
+https://jaimeguti.github.io/TFG_DEMOS/2.DEMO_Horizontal/Index.html
 
 
 - Demo Vertical:
 
-https://jaimeguti.github.io/TFG_DEMOS/3.DEMO_Vertical
+https://jaimeguti.github.io/TFG_DEMOS/3.DEMO_Vertical/Index.html
 
 
 - Demo Realidad Virtual (VR):
 
-https://jaimeguti.github.io/TFG_DEMOS/4.DEMO_VR
+https://jaimeguti.github.io/TFG_DEMOS/4.DEMO_VR/Index_VR.html
 
 
 - Demos Realidad Aumentada (AR):

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PULSO TRIANGULAR AR</title>
+        <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+        <script src="./Signal_3_AR.js"></script>
+        <script src="https://unpkg.com/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script> <!-- Scene -->
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.misc.min.js"></script> <!-- Super Hands -->
+        <script src="https://unpkg.com/super-hands@^3.0.3/dist/super-hands.min.js"></script> <!-- Super Hands -->
+    </head>
+  
+    <body>
+
+        <a-scene>
+            
+            <a-entity id="rig" movement-controls="fly: true" position="0 1 0" wasd-controls="acceleration: 10: fly: false">
+                <a-entity camera id="camera" position="0 2.5 0" look-controls></a-entity>
+                <a-entity cursor="rayOrigin: mouse" ></a-entity>
+                <a-entity light="type: ambient; color: #ffffff; intensity: 1"></a-entity> <!-- ambient, directional, hemisphere, point, spot, probe -->
+                <!-- Box move -->  
+                <a-entity sphere-collider="objects: .moveSignal" super-hands hand-controls="hand: left"></a-entity>
+                <a-entity sphere-collider="objects: .clickSignal" super-hands hand-controls="hand: right"></a-entity>
+            </a-entity>
+
+            <a-assets>
+                <canvas id="signal3canvas"></canvas>
+                <!-- OPERATIONS -->
+                <canvas id="despcanvas"></canvas>
+                <canvas id="scaledcanvas"></canvas>
+                <canvas id="invcanvas"></canvas>
+                <canvas id="highcanvas"></canvas>
+                <canvas id="negcanvas"></canvas>
+            </a-assets>
+
+            <!-- SIGNAL 3 -->
+            <a-entity   class="moveSignal" geometry="primitive: box; width: 10; height: 4; depth: 0.2" 
+                        position="0 3.5 -1.5" rotation="0 0 0" material="color: #4CC3D9; transparent: false; opacity: 0.15"
+                        hoverable grabbable stretchable draggable dropppable>
+
+                <!-- FRAME SIGNAL 3 -->
+                <a-entity   geometry="width: 2.125;  height: 1.125;  depth: 0.2" material="color: #ffd700; opacity: 1" position="-3.25 0"
+                            animation="property: material.opacity; dir: alternate; dur: 1500; easing: easeInSine; loop: true; begin: fade; to: 0.15">
+                </a-entity>
+
+                <a-entity   class="clickSignal" material = "src: #signal3canvas" position="-3.25 0 0" geometry="primitive: box"
+                            clickable draw-signal_3>
+                            <a-entity position="0.6 -0.4 0.15" text="value: SIGNAL 3; align: left; color: red" scale="3 3 3"></a-entity>
+                </a-entity>
+
+                <a-entity   class="clickSignal" material = "src: #despcanvas" position="-1 0.625 0" geometry="primitive: box" 
+                            clickable desp-signal_3>
+                            <a-entity position="0.6 -0.4 0.15" text="value: DESPLAZAMIENTO; align: left; color: red" scale="3 3 3"></a-entity>
+                </a-entity>
+
+                <a-entity   class="clickSignal" material = "src: #scaledcanvas" position="-1 -0.625 0" geometry="primitive: box" 
+                            clickable scaled-signal_3>
+                            <a-entity position="0.6 -0.4 0.15" text="value: ESCALADO; align: left; color: red" scale="3 3 3"></a-entity>
+                </a-entity>
+
+                <a-entity   class="clickSignal" material = "src: #invcanvas" position="1.25 0.625 0" geometry="primitive: box" 
+                            clickable inv-signal_3>
+                            <a-entity position="0.6 -0.4 0.15" text="value: INVERSION TEMPORAL; align: left; color: red" scale="3 3 3"></a-entity>
+                </a-entity>
+
+                <a-entity   class="clickSignal" material = "src: #highcanvas" position="1.25 -0.625 0" geometry="primitive: box" 
+                            clickable high-signal_3>
+                            <a-entity position="0.6 -0.4 0.15" text="value: ALTURA; align: left; color: red" scale="3 3 3"></a-entity>
+                </a-entity>
+
+                <a-entity   class="clickSignal" material = "src: #negcanvas" position="3.5 0.625 0" geometry="primitive: box" 
+                            clickable neg-signal_3>
+                            <a-entity position="0.6 -0.4 0.15" text="value: SIGNO; align: left; color: red" scale="3 3 3"></a-entity>
+                </a-entity>
+            
+            </a-entity>
+
+        </a-scene>
+
+    </body>
+</html>

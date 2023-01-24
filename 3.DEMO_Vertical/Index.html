@@ -19,8 +19,8 @@
     <body>
 
         <a-scene>
-            <a-entity  movement-controls="fly: true" position="-10 6 25" wasd-controls="acceleration: 80">
-                <a-entity camera position="-10 6 25" look-controls></a-entity>
+            <a-entity  movement-controls="fly: true" position="-10 1 25" wasd-controls="acceleration: 80">
+                <a-entity camera position="-10 1 25" look-controls></a-entity>
                 <a-entity cursor="rayOrigin: mouse" ></a-entity>
                 <a-entity laser-control="hand: rigth"></a-entity>
                 <a-entity environment="preset: starry"></a-entity> <!-- default, starry, moon -->
@@ -48,7 +48,7 @@
            <!-- INSTRUCTIONS -->
            <a-entity   geometry="primitive: box; width: 20; height: 10; depth: 0.25" material="color: black" position="0 10 25" rotation="0 -30 0"
                         animation="dir: alternate; dur: 5000; easing: easeInOutCubic; property: object3D.position.y; from: 12; to: 16; loop: true">
-                <a-entity htmlembed position="0 0 0.25" style="font-size: 900%; color: #4ef580;">
+                <a-entity htmlembed position="0 0 0.25" style="font-size: 850%; color: #4ef580;">
                     <pre>INSTRUCCIONES:</pre>
                     <hr>
                     <pre>- Recuadro brillante y coloreado situado a la izquierda -> señal original.</pre>

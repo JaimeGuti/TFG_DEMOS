@@ -48,8 +48,6 @@ AFRAME.registerComponent('draw-signal_3', {
 
             for(x=0; x<=400; x+=1) {
                 var desp_y = 180;
-                var frec = 90;
-                var scaled = 120;
                 var desp_x = 0.0;
                 var mod_desp = 0;
                    
@@ -301,7 +299,7 @@ AFRAME.registerComponent('scaled-signal_3', {
                 // signo = ' - ';
                 randomNum = -randomNum;
             }
-
+            
             if (mod_scaled > 0) {
                 if (mod_scaled == 1) {
                     var result = "y(t) = x(t)";
@@ -315,9 +313,9 @@ AFRAME.registerComponent('scaled-signal_3', {
             } else {
                 var result = "y(t) = x(t)";
             }
-            console.log(result)
+            // console.log(result)
 
-            this.text.setAttribute('value', "y(t) = x(" + randomNum + "t)");
+            this.text.setAttribute('value', result);
             this.text.setAttribute('color', 'red');
             this.text.setAttribute('position', '-1.8 0 0.25');
             this.text.setAttribute('scale', '3 3 3');

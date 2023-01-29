@@ -154,7 +154,7 @@ AFRAME.registerComponent('desp-signal_3', {
             this.box.setAttribute('width','4px');
             this.box.setAttribute('height','2px');
             this.box.setAttribute('depth','0.5px');
-            this.box.setAttribute('color', 'white');  
+            this.box.setAttribute('color', 'white');
             this.scene.appendChild(this.box);
                         
             this.text = document.createElement('a-text');
@@ -285,7 +285,7 @@ AFRAME.registerComponent('scaled-signal_3', {
             this.box.setAttribute('width','4px');
             this.box.setAttribute('height','2px');
             this.box.setAttribute('depth','0.5px');
-            this.box.setAttribute('color', 'white');  
+            this.box.setAttribute('color', 'white');
             this.scene.appendChild(this.box);
                         
             this.text = document.createElement('a-text');
@@ -299,7 +299,7 @@ AFRAME.registerComponent('scaled-signal_3', {
                 // signo = ' - ';
                 randomNum = -randomNum;
             }
-
+            
             if (mod_scaled > 0) {
                 if (mod_scaled == 1) {
                     var result = "y(t) = x(t)";
@@ -313,9 +313,9 @@ AFRAME.registerComponent('scaled-signal_3', {
             } else {
                 var result = "y(t) = x(t)";
             }
-            console.log(result)
+            // console.log(result)
 
-            this.text.setAttribute('value', "y(t) = x(" + randomNum + "t)");
+            this.text.setAttribute('value', result);
             this.text.setAttribute('color', 'red');
             this.text.setAttribute('position', '-1.8 0 0.25');
             this.text.setAttribute('scale', '3 3 3');
@@ -427,7 +427,7 @@ AFRAME.registerComponent('inv-signal_3', {
                 this.box.setAttribute('width','4px');
                 this.box.setAttribute('height','2px');
                 this.box.setAttribute('depth','0.5px');
-                this.box.setAttribute('color', 'white');  
+                this.box.setAttribute('color', 'white');
                 this.scene.appendChild(this.box);
                             
                 this.text = document.createElement('a-text');
@@ -464,7 +464,7 @@ AFRAME.registerComponent('inv-signal_3', {
                 this.box.setAttribute('width','4px');
                 this.box.setAttribute('height','2px');
                 this.box.setAttribute('depth','0.5px');
-                this.box.setAttribute('color', 'white');  
+                this.box.setAttribute('color', 'white');
                 this.scene.appendChild(this.box);
                             
                 this.text = document.createElement('a-text');
@@ -588,7 +588,7 @@ AFRAME.registerComponent('high-signal_3', {
             this.box.setAttribute('width','4px');
             this.box.setAttribute('height','2px');
             this.box.setAttribute('depth','0.5px');
-            this.box.setAttribute('color', 'white');  
+            this.box.setAttribute('color', 'white');
             this.scene.appendChild(this.box);
                         
             this.text = document.createElement('a-text');
@@ -711,7 +711,7 @@ AFRAME.registerComponent('neg-signal_3', {
                 this.box.setAttribute('width','4px');
                 this.box.setAttribute('height','2px');
                 this.box.setAttribute('depth','0.5px');
-                this.box.setAttribute('color', 'white');  
+                this.box.setAttribute('color', 'white');
                 this.box.setAttribute('border-width', '0.5px');
                 this.box.setAttribute('border-style', 'solid');
                 this.box.setAttribute('border-color', 'red');
@@ -750,7 +750,7 @@ AFRAME.registerComponent('neg-signal_3', {
                 this.box.setAttribute('width','4px');
                 this.box.setAttribute('height','2px');
                 this.box.setAttribute('depth','0.5px');
-                this.box.setAttribute('color', 'white');  
+                this.box.setAttribute('color', 'white');
                 this.box.setAttribute('border-width', '0.5px');
                 this.box.setAttribute('border-style', 'solid');
                 this.box.setAttribute('border-color', 'red');

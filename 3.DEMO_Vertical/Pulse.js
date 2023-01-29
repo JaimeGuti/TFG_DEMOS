@@ -304,10 +304,10 @@ AFRAME.registerComponent('scaled-pulse', {
                 randomNum = -randomNum;
             }
 
-            if (mod_scaled < 0) {
-                var result = "y(t) = x(t/" + randomNum + ")";
-            } else if (mod_scaled > 0) {
+            if (mod_scaled > 0) {
                 var result = "y(t) = x(" + randomNum + "t)";
+            } else if (mod_scaled < 0) {
+                var result = "y(t) = x(t/" + randomNum + ")";
             } else {
                 var result = "y(t) = x(t)";
             }
@@ -361,7 +361,7 @@ AFRAME.registerComponent('scaled-pulse', {
             this.material = new THREE.MultiMaterial(materials);
             this.mesh = new THREE.Mesh(this.geometry, this.material);
 
-            // el.getObject3D('mesh').material = new THREE.MeshBasicMaterial({ map: this.texture });
+            // el.getObject3D('mesh').material = new THREE.MeshBasicMaterial({ map: this.texture });;
             el.getObject3D('mesh').material = new THREE.MultiMaterial(materials);
         });
     }
@@ -485,11 +485,11 @@ AFRAME.registerComponent('inv-pulse', {
                 this.box.appendChild(this.text);
 
                 for(x=0; x<=400; x+=1) {
-                    var desplazamiento_y = 180;
-                    var desplazamiento_x = 0.0;
+                    var desp_y = 180;
+                    var desp_x = 0.0;
                     var mod_desp = -100;
 
-                    y = desplazamiento_y - Math.max(desplazamiento_x, 0)*1; // Modify high
+                    y = desp_y - Math.max(desp_x, 0)*1; // Modify high
 
                     if (x < 0 - mod_desp) {
                         this.ctx.lineTo(0, 75);
@@ -525,7 +525,7 @@ AFRAME.registerComponent('inv-pulse', {
             this.material = new THREE.MultiMaterial(materials);
             this.mesh = new THREE.Mesh(this.geometry, this.material);
 
-            // el.getObject3D('mesh').material = new THREE.MeshBasicMaterial({ map: this.texture });
+            // el.getObject3D('mesh').material = new THREE.MeshBasicMaterial({ map: this.texture });;
             el.getObject3D('mesh').material = new THREE.MultiMaterial(materials);
 
             count++;
@@ -668,7 +668,7 @@ AFRAME.registerComponent('high-pulse', {
             this.material = new THREE.MultiMaterial(materials);
             this.mesh = new THREE.Mesh(this.geometry, this.material);
 
-            // el.getObject3D('mesh').material = new THREE.MeshBasicMaterial({ map: this.texture });
+            // el.getObject3D('mesh').material = new THREE.MeshBasicMaterial({ map: this.texture });;
             el.getObject3D('mesh').material = new THREE.MultiMaterial(materials);
         });
     }
@@ -747,10 +747,10 @@ AFRAME.registerComponent('neg-pulse', {
                 this.box.appendChild(this.text);
 
                 for(x=0; x<=400; x+=1) {
-                    var desplazamiento_y = 180;
-                    var desplazamiento_x = 0.0;
+                    var desp_y = 180;
+                    var desp_x = 0.0;
                     
-                    y = desplazamiento_y - Math.max(desplazamiento_x, 0)*1;
+                    y = desp_y - Math.max(desp_x, 0)*1;
 
                     if (x < 150) {
                         this.ctx.lineTo(x, 75);    
@@ -785,10 +785,10 @@ AFRAME.registerComponent('neg-pulse', {
                 this.box.appendChild(this.text);
 
                 for(x=0; x<=400; x+=1) {
-                    var desplazamiento_y = 180;
-                    var desplazamiento_x = 0.0;
+                    var desp_y = 180;
+                    var desp_x = 0.0;
                     
-                    y = desplazamiento_y - Math.max(desplazamiento_x, 0)*1;
+                    y = desp_y - Math.max(desp_x, 0)*1;
 
                     if (x < 150) {
                         this.ctx.lineTo(x, 75);    
